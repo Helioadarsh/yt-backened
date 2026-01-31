@@ -1,9 +1,10 @@
 // require('dotenv').congif({path: './env'})
 import dotenv from "dotenv"
 
-import  mongoose from "mongoose";
-import {DB_NAME} from "./constants";
-import connectDB from "./db";
+// import  mongoose from "mongoose";
+// import {DB_NAME} from "./constants";
+import connectDB from "./db/index.js";
+import {app} from "./app.js";
 
 dotenv.config({
     path: './env'
@@ -18,9 +19,6 @@ connectDB()
 .catch((err)=>{
     console.log("Mongo db connection !!!", err)
 })
-
-
-
 
 
 

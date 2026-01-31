@@ -1,3 +1,4 @@
+
 import express from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
@@ -14,6 +15,16 @@ app.use(express.urlencoded({extended: true,list:
 app.use(express.static("public"))
 app.use(cookieParser())
 
+//routes
+
+import userRouter from "./routes/user.routes.js"
 
 
-export{app } 
+//routes declartion
+app.use("/api/v1/user", userRouter)
+
+
+// https:localhost:4000/api/v1/user/register
+export {app } 
+
+//thunderclient
